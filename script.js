@@ -3,8 +3,8 @@ let citySelect = document.querySelector('.citySelect')
 
 let countriesData = {
     Iran: ['tabriz', 'tehran', 'khoy', 'esfahan', 'mashhad'],
-    Turkey:['Istanbul', 'ezmir', 'ankara', 'antaliya'],
-    US:['vashangton', 'niyoyork', 'tegzas', 'losangles']
+    Turkey:['Istanbul', 'izmir', 'ankara', 'antalya'],
+    US:['washington', 'newyork', 'texas', 'losangles']
 }
 
 countrySelectBox.addEventListener('change', function(){
