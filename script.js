@@ -1,31 +1,24 @@
-let countrySelectBox = document.querySelector('.countrySelect')
-let citySelect = document.querySelector('.citySelect')
+let countrySelectBox = document.querySelector(".countrySelect");
+let citySelect = document.querySelector(".citySelect");
 
 let countriesData = {
-    Iran: ['tabriz', 'tehran', 'khoy', 'esfahan', 'mashhad'],
-    Turkey:['Istanbul', 'izmir', 'ankara', 'antalya'],
-    US:['washington', 'newyork', 'texas', 'losangles']
-}
+    Iran: ["Tehran", "Tabriz", "Khoy", "Isfahan", "Mashhad"],
+    Turkey: ["Istanbul", "Izmir", "Ankara", "Antalya"],
+    US: ["Washington DC", "New York", "Texas", "Los Angeles"],
+};
 
-countrySelectBox.addEventListener('change', function(){
-
-    if(countrySelectBox.value === "Please Select"){
-       citySelect.innerHTML = '';
-       citySelect.innerHTML += "<Option>select city</Option>";
-
+countrySelectBox.addEventListener("change", () => {
+    if (countrySelectBox.value === "Please Select") {
+        citySelect.innerHTML = "";
+        citySelect.innerHTML += "<option>Select City ...</option>";
     } else {
-        let mainCountryName = countrySelectBox.value
-        let mainCountrycities = (countriesData[mainCountryName]);
+        let mainCountryName = countrySelectBox.value;
+        let mainCountrycities = countriesData[mainCountryName];
 
-        citySelect.innerHTML = '';
+        citySelect.innerHTML = "";
 
-        mainCountrycities.forEach(function (city) {
-            // console.log(city)
-
-            citySelect.innerHTML += '<option>' + city + '</option>'
+        mainCountrycities.forEach((city) => {
+            citySelect.innerHTML += `<option>${city}</option>`;
         });
     }
-
-    
 });
-
